@@ -1,0 +1,79 @@
+# --- Frameworks & Protocol Mastery ---
+impacket            # SMB, MSSQL, LDAP, Kerberos
+scapy               # Packet manipulation
+pwntools            # Exploit development / CTF
+bloodhound          # AD enumeration
+pypsrp              # PowerShell Remoting
+
+# --- Cracking & PDF Tools (Python Ports) ---
+pdf2john            # PyPI port of the PDF hash extractor
+passlib             # Password hashing/cracking utility library
+hashid              # Identify hash types
+
+# --- Web & Recon ---
+requests            # HTTP library
+httpx               # HTTP/2 support
+wfuzz==2.4.4        # Web fuzzer (pinned to avoid invalid metadata on pip>=24.1)
+dirsearch           # Path brute-forcing
+theHarvester        # OSINT recon
+sublist3r           # Subdomain enumeration
+# spiderfoot       # Removed: not available on PyPI; install manually if needed
+
+# --- Cloud & Modern Infrastructure ---
+# cloud_enum         # Removed: not available on PyPI; install from source if needed
+boto3               # AWS SDK
+azure-cli           # Azure management
+pacu                # AWS exploitation framework
+
+# --- Post-Exploitation ---
+lsassy              # Remote lsass dumping
+pwncat-cs           # Advanced reverse shell handler
+
+# --- Forensics & Binary Analysis ---
+binwalk             # Firmware / binary file analysis
+volatility3         # Memory forensics framework
+pefile              # PE (Windows executable) parsing
+pyelftools          # ELF binary parsing
+ROPGadget           # ROP chain discovery
+capstone            # Multi-architecture disassembly engine
+unicorn             # CPU emulation framework
+msoffcrypto-tool    # Decrypt encrypted Office documents
+oletools            # Office / OLE file malware analysis
+olefile             # OLE2 compound document parser
+
+# --- Steganography & Media ---
+pillow              # Image processing (PIL fork)
+opencv-python       # Computer vision / image analysis
+stegano             # LSB steganography
+pyzbar              # Barcode / QR code decoding
+piexif              # EXIF metadata read/write
+PyExifTool          # ExifTool Python wrapper (requires exiftool binary)
+python-magic        # File type detection via libmagic
+
+# --- Hash Identification ---
+name-that-hash      # Modern hash identifier (companion to hashid)
+search-that-hash    # Online hash lookup / cracking
+
+# --- Cryptographic Primitives ---
+pycryptodome        # Low-level crypto (AES, RSA, SHA, etc.)
+cryptography        # High-level crypto (TLS, X.509, FIDO2)
+PyNaCl              # libsodium / NaCl bindings
+pyOpenSSL           # OpenSSL bindings
+
+# --- Network & Active Directory ---
+paramiko            # SSH2 protocol client/server
+ldap3               # Pure-Python LDAP client
+ldapdomaindump      # Dump and visualise AD data via LDAP
+dnspython           # DNS toolkit
+python-whois        # WHOIS lookups
+
+# --- Web Exploitation ---
+beautifulsoup4      # HTML / XML parsing and scraping
+sqlmap              # Automated SQL injection and takeover
+
+# --- Utilities ---
+rich                # Pretty terminal output / tables
+numpy               # Numerical computing
+psutil              # Process and system monitoring
+loguru              # Structured / colourised logging
+Flask               # Lightweight web framework (payload servers, mini CTF apps)

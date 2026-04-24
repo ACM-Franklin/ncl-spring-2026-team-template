@@ -1,0 +1,11 @@
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+
+# Large Wordlists
+Password_Cracking/wordlists/
+
+# MCP Stuff
+/.serena
