@@ -32,6 +32,7 @@ All guidance in this file is **normative**, not advisory. If a conflict exists b
 
 * **Operator**: A team member cloning this repo for the NCL Spring 2026 Team Game.
 * **Competition**: NCL Spring 2026 — Team Game.
+* **Collaboration model**: Multiple teammates work this repo **asynchronously** — different people may be solving different challenges concurrently, committing from separate machines. Assume the tree may have changed since last pull. Do not assume you are the only one writing to it.
 * **Role of AI**: Acting as an expert CTF partner. The user acts as the human bridge — they paste challenge descriptions, questions, and any downloadable files or content. The AI analyzes, solves, documents, and asks follow-up questions.
 * **Flag format**: NCL flags in this repo use the `SKY-` prefix, but do **not** assume a fixed segment pattern. Verify the exact accepted format from the challenge and submissions (for example, `SKY-KITT-7611` was accepted even though it is not `SKY-XXX-####`).
 * **Scoring**: Speed and accuracy both matter. Don't gold-plate. Solve it, document it, move on.
@@ -94,10 +95,13 @@ Default to the **guided/educational mode** — walk the user through the reasoni
 7. **Commit the solve.** `solve(category): Challenge Name (Difficulty)`
 
 ```bash
+git pull --rebase
 git add Category/Challenge_Name_(Difficulty)/
 git commit -m "solve(category): Challenge Name (Difficulty)"
 git push
 ```
+
+Always pull before pushing — teammates are working async. Conflicts are rare (each challenge lives in its own folder) but don't be the idiot who force-pushes over someone's work.
 
 No ceremony. No unnecessary abstractions. Solve the damn challenge if asked to.
 
@@ -240,11 +244,13 @@ Hitting a wall is not failure — it's a checkpoint. Use these in order:
 
 AI agents MUST NOT:
 
-* Create unnecessary branches or PRs — teams may commit directly to `main` unless their workflow requires otherwise.
+* Create unnecessary branches or PRs — teams may commit directly to `main` unless their workflow requires otherwise. If two teammates are actively solving the same challenge simultaneously, a short-lived branch is acceptable to avoid collision, but don't make it a habit.
 * Suggest CI/CD pipelines.
 * Write unit tests for solve scripts.
 * Add docstrings to one-off scripts.
 * Over-engineer anything. This is a CTF. Ship it.
+
+**Async awareness**: Each challenge lives in its own isolated folder, so merge conflicts are rare. Still, always `git pull --rebase` before committing. If a conflict does occur, it means two people touched the same file — coordinate with the teammate and resolve it manually, don't let the AI blindly merge.
 
 ---
 
